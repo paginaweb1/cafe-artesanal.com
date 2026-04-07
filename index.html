@@ -32,37 +32,63 @@ body,h1,h2,h3,h4,h5,h6 {
   object-fit:cover;
 }
 
-/* Ajuste para celulares */
-@media screen and (max-width:600px){
-
-.video-container{
-  height:40vh;
-}
-  .btn-volver{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #000;
-    color: #fff;
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:18px;
-    z-index:1001;
-    text-decoration:none;
-    box-shadow:0 0 10px rgba(0,0,0,0.5);
-    transition:0.3s;
+/* BOTÓN VOLVER LATERAL IZQUIERDO */
+.btn-volver{
+  position: fixed;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background: #000;
+  color: #fff;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:18px;
+  z-index:1001;
+  text-decoration:none;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  transition:0.3s;
 }
 
 .btn-volver:hover{
-    background:#00ff9d;
-    color:#000;
-    transform:scale(1.1);
+  background:#00ff9d;
+  color:#000;
+  transform: translateY(-50%) scale(1.1);
 }
 
+/* BOTÓN WHATSAPP */
+.btn-whatsapp{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:26px;
+  z-index:1001;
+  text-decoration:none;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+  transition:0.3s;
+}
+
+.btn-whatsapp:hover{
+  transform: scale(1.1);
+  background:#1ebe5d;
+}
+
+/* Ajuste para celulares */
+@media screen and (max-width:600px){
+  .video-container{
+    height:40vh;
+  }
 }
 </style>
 
@@ -70,14 +96,20 @@ body,h1,h2,h3,h4,h5,h6 {
 
 <body class="w3-light-grey">
 
-  <a href="index.html" class="btn-volver">
-    <i class="fas fa-arrow-left"></i>
+<!-- BOTÓN VOLVER -->
+<a href="index.html" class="btn-volver">
+  <i class="fa fa-arrow-left"></i>
+</a>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573167017590" target="_blank" class="btn-whatsapp">
+  <i class="fa fa-whatsapp"></i>
 </a>
 
 <!-- Navigation Bar -->
 <div class="w3-bar w3-black w3-large">
 
-<img src="Logo-cafe22.png" alt="Logo" style="width:50px;" class="w3-bar-item">
+<img src="Logo-cafe22.png" alt="Logo" style="width:150px;" class="w3-bar-item">
 
 <!-- Botón hamburguesa -->
 <a href="javascript:void(0)" 
@@ -95,20 +127,16 @@ onclick="toggleMenu()">
 
 <!-- Menú para celular -->
 <div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
-
 <a href="#rooms" class="w3-bar-item w3-button">Caficultura</a>
 <a href="#about" class="w3-bar-item w3-button">Tueste</a>
 <a href="#contact" class="w3-bar-item w3-button">Contacto</a>
-
 </div>
 
 <!-- Header -->
 <header class="video-container">
-
 <video autoplay muted loop id="myVideo">
 <source src="pprincipal.mp4" type="video/mp4">
 </video>
-
 </header>
 
 <!-- Page content -->
@@ -126,11 +154,9 @@ onclick="toggleMenu()">
 <div class="w3-container w3-white">
 <br>
 <button class="w3-button w3-block w3-black w3-margin-bottom">Recoleccion</button>
-
 <p>
 La recolección de café es manos campesinas eligen solo los granos maduros, uno por uno. No es solo cosechar, es cuidar una tradición que da vida a cada taza.
 </p>
-
 </div>
 </div>
 
@@ -139,11 +165,9 @@ La recolección de café es manos campesinas eligen solo los granos maduros, uno
 <div class="w3-container w3-white">
 <br>
 <button class="w3-button w3-block w3-black w3-margin-bottom">Despulpado</button>
-
 <p>
 El despulpado artesanal de café es un acto de amor y tradición. Después de la cosecha, cada cereza madura se despulpa a mano o con máquinas rústicas.
 </p>
-
 </div>
 </div>
 
@@ -152,11 +176,9 @@ El despulpado artesanal de café es un acto de amor y tradición. Después de la
 <div class="w3-container w3-white">
 <br>
 <button class="w3-button w3-block w3-black w3-margin-bottom">Lavado/Secado</button>
-
 <p>
 El proceso de lavado y secado del café es clave para lograr una taza perfecta.
 </p>
-
 </div>
 </div>
 
@@ -210,20 +232,14 @@ La excelencia del tueste del café colombiano es el resultado de una combinació
 <!-- Script hamburguesa -->
 <script>
 function toggleMenu() {
-var x = document.getElementById("mobileMenu");
-if (x.className.indexOf("w3-show") == -1) {
-x.className += " w3-show";
-} else {
-x.className = x.className.replace(" w3-show", "");
-}
+  var x = document.getElementById("mobileMenu");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
 }
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
