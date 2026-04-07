@@ -38,6 +38,30 @@ body,h1,h2,h3,h4,h5,h6 {
 .video-container{
   height:40vh;
 }
+  .btn-volver{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #000;
+    color: #fff;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    z-index:1001;
+    text-decoration:none;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.btn-volver:hover{
+    background:#00ff9d;
+    color:#000;
+    transform:scale(1.1);
+}
 
 }
 </style>
@@ -45,6 +69,10 @@ body,h1,h2,h3,h4,h5,h6 {
 </head>
 
 <body class="w3-light-grey">
+
+  <a href="index.html" class="btn-volver">
+    <i class="fas fa-arrow-left"></i>
+</a>
 
 <!-- Navigation Bar -->
 <div class="w3-bar w3-black w3-large">
